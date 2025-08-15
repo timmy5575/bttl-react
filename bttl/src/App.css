@@ -1,0 +1,563 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: #000000;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-left: 4rem;
+
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.423) 2px, transparent 0),
+    radial-gradient(rgba(255, 255, 255, 0.425) 1.5px, transparent 0),
+    radial-gradient(rgba(255, 255, 255, 0.424) 1px, transparent 0);
+  background-size: 60px 60px, 80px 80px, 100px 100px;
+  background-position: 0 0, 30px 30px, 60px 60px;
+
+  animation: floatDots 8s ease-in-out infinite;
+}
+@keyframes floatDots {
+  0%, 100% {
+    background-size: 60px 60px, 80px 80px, 100px 100px;
+  }
+  50% {
+    background-size: 63px 63px, 83px 83px, 97px 97px;
+  }
+}
+.angled-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  clip-path: polygon(50% 0%, 100% 0%, 100% 100%);
+  animation: mov 2s linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 4rem;
+ 
+}
+
+@keyframes mov {
+  from {
+    transform: translateX(500px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.angled-background h1 {
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  font-style: italic; 
+  color: #000000;
+  margin-bottom: 20px;
+  margin-right: 55px;
+   margin-top: -50px;
+  
+
+}
+
+.angled-background button {
+  position: relative; top: -230px;
+  padding: 20px 30px;
+  font-size: 16px; font-weight: 900;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+.angled-background button:hover{background-color: transparent; color: #000000; border: 2px rgb(0, 0, 0) solid;
+
+}
+.content {
+  position: relative;
+  z-index: 1;
+}
+.content  h1{ 
+  margin-top: 20px;
+  font-size: 50px;
+}.content  h5{ margin-left: 100px;
+  opacity: 0.8;
+}.content p{ width: 50%;
+ padding: 20px; font-weight: 800;  font-size: 25px;
+}
+.content ul { width: 50%; margin-bottom: -80px;
+  display: flex; justify-content: space-around; list-style-type: none;
+}
+.content ul a{ text-decoration: none; color: white; text-transform: capitalize;}
+.content ul a:hover{
+  text-decoration: underline;
+}
+.content button{  padding: 20px 30px;
+  font-size: 16px; margin-left: 50px;
+  background: rgb(255, 252, 252);
+  color: rgb(0, 0, 0);
+  border: none; font-weight: 900;
+  border-radius: 5px;
+  cursor: pointer;}
+
+  .content button:hover{ background-color: transparent; color: #ded9ff; border: 2px white solid;}
+
+header{ position: relative; top:-100px; }
+
+@media (max-width: 1200px) {
+  .angled-background h1 { font-size: 2.5rem; }
+  .content p, .content ul { width: 60%; }
+}
+
+/* Tablets */
+/* Large tablets and small laptops */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    padding: 20px 10px; 
+    align-items: center; justify-content: space-around;
+    text-align: center;
+    color: #fffafa;
+    min-height: auto; /* let height grow naturally */
+  }
+
+ .angled-background {
+    align-items: center;
+    padding: 1rem 0; background-color: transparent;
+     clip-path: none; /*remove shape if it hides content  */
+    width: 100%;
+  }
+
+  /* .angled-background h1 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  } */
+
+  .angled-background button { margin-bottom: -60px; background: rgba(255, 252, 252, 0);
+  color: rgb(255, 255, 255) ;border: 2px white solid;
+    margin-top: 2rem;
+  } .angled-background button:hover{ background-color: white; color: #000000; border: 2px white solid;}
+
+  .content {
+    width: 100%;
+  }
+ .content button{
+  margin-top: 50px; margin-right: 20px;
+ }
+ header{  top:-50px; }
+  .content p,
+  .content ul {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+   .content p{
+    margin-top: 40px;
+   }   .content h1,h5{ padding: 5px;
+    margin-bottom: -20px;
+   }
+
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .hero {
+    padding: 1.5rem 1rem;
+  }
+
+  .content h1 {
+    font-size: 1.8rem;
+  }
+
+  .content p {
+    font-size: 1.1rem;
+    width: 95%;
+  }
+  
+.angled-background button {  margin-top: 100px; background: rgba(255, 252, 252, 0);}
+  .angled-background h1 {
+    font-size: 1.6rem;
+  }
+
+  .angled-background button,
+  .content button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero {
+    padding: 1rem 0.5rem;
+  }
+
+  .content h1 {
+   margin-left: -100px; font-size: 1.4rem;
+  }
+  .content h5{
+    margin-left: -60px;
+  }
+   header{  top:-80px; }
+  .angled-background button {  margin-top: 120px; }
+
+  .content p {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .angled-background h1 {
+    font-size: 1.2rem;
+  }
+}
+
+
+.sec { height: 300px;
+ position: relative; 
+  width: 88%; margin: auto;  
+  background-color: rgba(196, 47, 47, 0);  overflow: hidden;
+  
+}
+.item{ position: absolute; left: max( calc(250px * 8), 100%) ; border: #000000;
+  width: 250px; height: 300px; background-color: blue; border-radius: 6px;
+  animation: scrollup 30s linear infinite;  margin-top: 50px;
+  overflow: hidden;  
+}
+@keyframes scrollup{
+  to{
+left: -250px;
+  }
+}
+.item1 {   animation-delay: calc(30s / 8 * (8 - 1) * -1); }
+.item2 {  animation-delay: calc(30s / 8 * (8 - 2) * -1); }
+.item3 {  animation-delay: calc(30s / 8 * (8 - 3) * -1); }
+.item4 {  animation-delay: calc(30s / 8 * (8 - 4) * -1); }
+.item5 {  animation-delay: calc(30s / 8 * (8 - 5) * -1); }
+.item6 {  animation-delay: calc(30s / 8 * (8 - 6) * -1); }
+.item7 {  animation-delay: calc(30s / 8 * (8 - 7) * -1); }
+.item8 {  animation-delay: calc(30s / 8 * (8 - 8) * -1); }
+
+.imas{background-color: #000000; height: 350px; justify-content: center; align-items: center;}
+.item img{
+  height: 300px; width: 250px;
+  
+}
+
+section{
+  background-color: #000000;
+}
+.cards {
+  padding: 25px;
+  display: flex;
+  flex-direction: column; /* Stacks content vertically for small screens */
+  align-items: center;
+}
+
+.cards h1 {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 80px); /* Scales title */
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.cards img {
+  border-radius: 30px;
+  border: 2px solid white;
+  box-shadow: 0 4px 15px 0px;
+  width: 100%;
+  max-width: 500px; /* Prevents overflow */
+  height: auto; /* Keeps aspect ratio */
+  animation: immg 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50vh;
+}
+
+@keyframes immg {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* sev section */
+.sev {
+  display: flex;
+  flex-wrap: wrap; /* Makes it stack on small screens */
+  justify-content: space-evenly;
+  margin: 50px auto;
+  gap: 20px;
+  width: 100%;
+}
+
+.sev div {
+  width: 40%;
+  min-width: 280px; /* Prevents text from being too squished */
+  margin: auto;
+}
+
+.sev div h3 {
+  font-size: clamp(1.5rem, 3vw, 35px);
+  font-weight: 900;
+  padding: 20px;
+}
+
+.sev div p {
+  font-size: clamp(0.9rem, 2vw, 18px);
+  font-weight: 100;
+}
+.sev div p{ font-size: 18px; font-weight: 100; }
+.sev .come1{
+  animation: sone 5s linear ; animation-timeline: view(); animation-range: entry 0% cover 50vh;
+}@keyframes sone{
+    from{opacity: 0; transform: translateX(100%);}
+    to{opacity: 1; transform: translateX(0%);}}
+.sev .come2{
+  animation: done 5s linear ; animation-timeline: view(); animation-range: entry 0% cover 50vh;
+}@keyframes done{
+    from{opacity: 0; transform: translateX(-100%);}
+    to{opacity: 1; transform: translateX(0%);}}
+    .sev .come3{
+  animation: fone 5s linear ; animation-timeline: view(); animation-range: entry 0% cover 50vh;
+}@keyframes fone{
+    from{opacity: 0; transform: translateX(100%);}
+    to{opacity: 1; transform: translateX(0%);}}
+    .sev .come4{
+  animation: gone 5s linear ; animation-timeline: view(); animation-range: entry 0% cover 50vh;
+}@keyframes gone{
+    from{opacity: 0; transform: translateX(-100%);}
+    to{opacity: 1; transform: translateX(0%);}}
+    .sev .come5{
+  animation: hone 5s linear ; animation-timeline: view(); animation-range: entry 0% cover 50vh;
+}@keyframes hone{
+    from{opacity: 0; transform: translateX(100%);}
+    to{opacity: 1; transform: translateX(0%);}}
+
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+  .sev div {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    padding: 15px;
+  }
+  .sev div {
+    width: 100%; /* Full width on mobile */
+  }
+}
+
+
+  .section3{ background-color: #000000; height: 100%}
+.section3 h1{  font-weight: 900;  font-size: clamp(2rem, 5vw, 80px);  text-decoration: underline;}
+
+.f-d{display: flex;flex-direction: column;  margin: auto;text-align: center;
+    background-color: rgb(255, 255, 255); box-sizing: border-box; 
+   padding: 50px; border-radius: 40% 40% 0 0; height: 100%;
+  animation: pro 8s linear;  animation-timeline: view(); animation-range: entry 0% cover 90vh;
+   
+}
+@keyframes pro {
+    from{transform: translateY(500px);}
+    to{ transform:translateY(0px);} 
+}
+.f-d p{font-size: 15px; font-weight: 1000; margin: 10px; }
+
+
+
+@keyframes pro {
+  from { transform: translateY(500px); }
+  to { transform: translateY(0px); }
+}
+
+.f-d p {
+  font-size: clamp(12px, 2vw, 15px);
+  font-weight: 1000;
+  margin: 10px;
+}
+
+input,
+textarea {
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
+  background-color: #000000;
+  color: white;
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+input {
+  width: 60%;
+  height: 90px;
+}
+
+input:hover {
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid black;
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 4px 15px 0px;
+  transition: all 0.5s ease;
+}
+
+textarea {
+  width: 60%;
+  height: 200px;
+}
+
+textarea:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid black;
+  box-shadow: 0 4px 15px 0px;
+  transition: all 0.5s ease;
+}
+
+button {
+  width: clamp(150px, 20vw, 200px);
+  padding: 20px 30px;
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: 900;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid black;
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 4px 15px 0px;
+  transition: all 0.5s ease;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .f-d {
+    padding: 30px;
+    border-radius: 30% 30% 0 0;
+  }
+  input, textarea {
+    width: 80%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .f-d {
+    padding: 20px;
+    border-radius: 20% 20% 0 0;
+  }
+  input, textarea {
+    width: 90%;
+    height: auto;
+  }
+  button {
+    width: 80%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .section3 h1 {
+    font-size: 1.8rem;
+  }
+  .f-d p {
+    font-size: 12px;
+  }
+  input, textarea {
+    width: 95%;
+  }
+}
+
+
+
+
+  footer img{ margin: 50px; border-radius: 50%;
+    height: 200px; width: 200px;
+  }
+  footer{background-color: #000000; color: white; display: flex; justify-content: space-between; padding: 50px;}
+.ul{ display: flex; justify-content: space-between; list-style-type: none; width: 50%; }
+.ul ul {list-style: none; margin: 50px;}
+.ul ul a{text-decoration: none; color: white;}.ul ul a:hover{opacity: 0.6;}
+  .f-1 {
+    width: 50%;
+    display: flex;
+  }
+
+  @media (max-width: 1024px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ul {
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .f-1 {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  footer img {
+    height: 120px;
+    width: 120px;
+  }
+
+  .ul ul {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 20px;
+  }
+
+  footer img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .f-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+  /* .f-3 h2{
+    background-color: aqua;
+  } */
