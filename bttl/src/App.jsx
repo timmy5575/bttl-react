@@ -1,19 +1,19 @@
 import './App.css';
 import Secti from './sec.jsx';
-import noble1 from'./assets/bttl react/noble1.jpeg';
-import jjk from'./assets/bttl react/jjk.jpg';
-import butfly from'./assets/bttl react/butfly.jpeg';
-import noble3 from'./assets/bttl react/noble3.jpg';
-import pt from'./assets/bttl react/pt.jpg';
-import timmy from'./assets/bttl react/timmy.jpeg';
-import peace from'./assets/bttl react/peace.JPG';
-import noble2 from'./assets/bttl react/noble2.jpg';
-import Portrait from './assets/bttl react/Portrait 1.JPG';
-import Mobile from './assets/bttl react/Portrait 4.PNG';
-import Event from './assets/bttl react/Portrait 3.jpg';
-import Content from './assets/bttl react/Portrait 5.jpg';
-import  Lightroom  from './assets/bttl react/Portrait 6.PNG';
-import bttl from './assets/bttl react/BTTL.png'
+import noble1 from'./assets/bttl-react/noble1.jpeg';
+import jjk from'./assets/bttl-react/jjk.jpg';
+import butfly from'./assets/bttl-react/butfly.jpeg';
+import noble3 from'./assets/bttl-react/noble3.jpg';
+import pt from'./assets/bttl-react/pt.jpg';
+import timmy from'./assets/bttl-react/timmy.jpeg';
+import peace from'./assets/bttl-react/peace.JPG';
+import noble2 from'./assets/bttl-react/noble2.jpg';
+import Portrait from './assets/bttl-react/Portrait 1.JPG';
+import Mobile from './assets/bttl-react/Portrait 4.PNG';
+import Event from './assets/bttl-react/Portrait 3.jpg';
+import Content from './assets/bttl-react/Portrait 5.jpg';
+import  Lightroom  from './assets/bttl-react/Portrait 6.PNG';
+import bttl from './assets/bttl-react/BTTL.png'
 
 function App() {
 
