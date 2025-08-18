@@ -1,0 +1,23 @@
+.container {
+  width: 90%; overflow-x: hidden;
+  height: auto;         /* let height grow with content */
+ top: 50px;     /* replaced top:50px for better flow */
+  position: relative;   /* no need absolute */
+  right: -100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* always 3 equal columns */
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-item {
+  border-radius: 8px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background: #ccc; /* added for visibility */
+}  
+.item4{grid-column: span 2;}.item7{grid-column: span 2;}
+.item1{grid-row: span 3 ; height: 400px;}.item11{grid-row: span 2 ; height: 200px;}

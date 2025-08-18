@@ -1,5 +1,7 @@
+import {BrowserRouter as Router,Routes,Route, Link } from "react-router-dom"
 import './App.css';
 import Secti from './sec.jsx';
+import Gallery from './gallery.jsx';
 import noble1 from'./assets/bttl-react/noble1.jpeg';
 import jjk from'./assets/bttl-react/jjk.jpg';
 import butfly from'./assets/bttl-react/butfly.jpeg';
@@ -14,13 +16,10 @@ import Event from './assets/bttl-react/Portrait 3.jpg';
 import Content from './assets/bttl-react/Portrait 5.jpg';
 import  Lightroom  from './assets/bttl-react/Portrait 6.PNG';
 import bttl from './assets/bttl-react/BTTL.png'
-
 function App() {
-
-
   return (
-    <>
-
+<>
+<Router>
 <div className="hero">
   <div className="angled-background"> <h1>BTTl</h1> <button>contact Me</button></div>
 
@@ -38,15 +37,21 @@ function App() {
     <h5>where every last shot is better than the last</h5>
     <p>|mobile photography. real moments. clean edits.
 capturing with intention, editing with purpose</p>
-<button>explore my work</button>
+ <Link to="/gallery"><button>explore my work</button> </Link>
+<Routes>
+  <Route path="/gallery" element= {<Gallery />} />
+</Routes>
+ 
   </div>
 </div>
+</Router>
+
 <section className='imas'>
   <div className='sec'>
   <div className='item item1'><img src={noble1} alt="img1" /></div>
   <div className='item item2'> <img src={jjk} alt="img2" /></div>
   <div className='item item3'> <img src={butfly} alt="img3" /></div>
-  <div className='item item4'> <img src= {noble3} alt="img4" /></div>
+  <div className='item item4'> <img src={noble3} alt="img4" /></div>
   <div className='item item5'> <img src={pt} alt="img5" /></div>
   <div className='item item6'> <img src={timmy} alt="img6" /></div>
   <div className='item item7'> <img src={peace} alt="img7" /></div>
